@@ -9,6 +9,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.15"
+    "@arwes/react": "^1.0.0-next.25020502",
+    "@arwes/react-animator": "^1.0.0-next.25020502",
+    "@arwes/react-bleeps": "^1.0.0-next.25020502",
+    "@arwes/react-frames": "^1.0.0-next.25020502",
+    "@arwes/react-text": "^1.0.0-next.25020502",
+    "@astrojs/react": "^4.4.2",
+    "@emotion/react": "^11.14.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.16.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.1.18"
   }
 }

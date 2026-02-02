@@ -1,0 +1,41 @@
+---
+// src/layouts/Layout.astro
+import ArwesContainer from '../components/ArwesContainer';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portafolio de Ingeniería y Desarrollo" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	
+    <body class="bg-slate-950 text-cyan-50 font-titillium min-h-screen">
+		
+        <ArwesContainer client:only="react">
+			<slot /> </ArwesContainer>
+
+	</body>
+</html>
+
+<style is:global>
+	/* Forzar la fuente en todo el sitio */
+	:root {
+		--font-titillium: 'Titillium Web', sans-serif;
+	}
+	body {
+		font-family: var(--font-titillium);
+        margin: 0;
+        background-color: #071821; /* Color de fondo muy oscuro (Sci-Fi) */
+	}
+</style>

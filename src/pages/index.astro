@@ -1,17 +1,35 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import SciFiCard from '../components/ScifiCard'; 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Marlex | System Online">
+  
+  <main class="flex flex-col items-center justify-center p-10 min-h-[80vh]">
+    
+    <h1 class="text-5xl font-bold text-cyan-400 mb-12 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(0,248,248,0.5)]">
+      Panel de Control
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+      
+      <SciFiCard client:visible title="Proyecto MacroBox">
+        Plataforma web para gestión de macros en Geometry Dash.
+        <br/><br/>
+        <div class="flex gap-2 mt-2">
+            <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded border border-cyan-500/30">React</span>
+            <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded border border-cyan-500/30">Astro</span>
+        </div>
+      </SciFiCard>
+
+      <SciFiCard client:visible title="Licencia de Conducir">
+        Habilitación oficial categoría A1 obtenida en Noviembre 2025.
+        <br/><br/>
+        <span class="text-green-400 text-sm"> ESTADO: ACTIVO</span>
+      </SciFiCard>
+
+    </div>
+
+  </main>
+
+</Layout>
